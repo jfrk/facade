@@ -1,0 +1,23 @@
+{
+  "name": "@jfrk/facade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.5.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2"
+  },
+  "dependencies": {
+    "decurry": "^2.0.1"
+  }
+}
