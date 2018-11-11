@@ -147,7 +147,21 @@ const wrap = decurry(3, types => {
         }
         let descriptor = getPropDescriptor(spec, prop)
         // If no specification for this prop, just get it directly from the target.
-        if (!descriptor) {
+        if (
+          !descriptor ||
+          (!descriptor.writable && !descriptor.configurable)
+        ) {
+          return Reflect.get(target, prop, wrapper)
+        }
+        let targetDescriptor = Object.getOwnPropertyDescriptor(
+          target,
+          prop,
+        )
+        if (
+          targetDescriptor &&
+          (!targetDescriptor.writable &&
+            !targetDescriptor.configurable)
+        ) {
           return Reflect.get(target, prop, wrapper)
         }
         // If the spec has a getter for this prop, call it
