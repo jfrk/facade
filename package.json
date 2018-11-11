@@ -16,10 +16,10 @@
   "homepage": "https://github.com/jfrk/facade#readme",
   "devDependencies": {
     "babel-eslint": "^9.0.0",
-    "eslint": "^5.5.0",
-    "eslint-plugin-jest": "^21.22.0",
-    "jest": "^23.5.0",
-    "prettier": "^1.14.2"
+    "eslint": "^5.9.0",
+    "eslint-plugin-jest": "^21.27.2",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2"
   },
   "dependencies": {
     "decurry": "^2.0.1"
